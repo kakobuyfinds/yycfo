@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>HubBuy spreadsheet – Produktlinks, QC-Fotos und Größen</title>
+  <meta name="description" content="Deutschsprachiger HubBuy-Ratgeber: Stöbere bei Hipobuyfind nach Sneakern und Streetwear und prüfe Produktlinks, Größen, QC-Fotos und Versandkosten.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="HubBuy spreadsheet – Produktlinks, QC-Fotos und Größen">
+  <meta property="og:description" content="Produktkategorien bei Hipobuyfind und ein Einkaufsratgeber zu Größen, QC-Fotos und Versand.">
+  <style>
+    :root{color-scheme:light;--paper:#f8f4ed;--ink:#281a2d;--muted:#594b5b;--line:#d7cbd2;--accent:#5c285c;--lime:#e8f29d}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    a{color:inherit;text-underline-offset:.2em}
+    a:focus-visible,summary:focus-visible{outline:3px solid #8b3c89;outline-offset:4px}
+    .wrap{width:min(100% - 2rem,70rem);margin-inline:auto}
+    header{border-bottom:1px solid var(--line);padding-block:1rem}
+    header a{font-weight:800;text-decoration:none}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2{font-family:Georgia,serif;line-height:1.08}
+    h1{font-size:clamp(2.8rem,8vw,6rem);letter-spacing:-.055em}
+    h2{font-size:clamp(1.8rem,4vw,3.2rem);letter-spacing:-.035em}
+    h3{font-size:1.15rem;line-height:1.3}
+    .hero{display:grid;grid-template-columns:1.35fr 1fr;align-items:center;gap:clamp(1rem,5vw,4rem);padding-block:clamp(1.5rem,5vw,4rem)}
+    .hero p{margin-top:1rem;max-width:54ch}
+    .intro{color:var(--muted)}
+    .button{display:inline-block;margin-top:1.2rem;padding:.65rem 1rem;background:var(--lime);border:1px solid var(--ink);border-radius:.45rem;font-weight:750}
+    .hero figure{background:#eee0ed;border:1px solid var(--line);border-radius:1rem;overflow:hidden}
+    img{display:block;width:100%;object-fit:contain;background:#f1e9ef}
+    .hero img{height:auto;aspect-ratio:5/3;mix-blend-mode:multiply}
+    figcaption{padding:.5rem .75rem;font-size:.85rem;color:var(--muted)}
+    .categories{border-block:1px solid var(--line);padding-block:1.25rem}
+    .categories h2{font-size:1.8rem}
+    .categories ul{list-style:none;padding:0;margin:1rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));gap:.5rem}
+    .categories a{display:block;border:1px solid var(--line);border-radius:.4rem;padding:.6rem .75rem;font-weight:650}
+    .categories a:hover,.button:hover{background:#fff}
+    .section{margin-block:clamp(2rem,6vw,4.5rem)}
+    .section>p{margin-top:.65rem;color:var(--muted)}
+    .gallery,.articles{display:grid;gap:.8rem;margin-top:1rem}
+    .gallery{grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr))}
+    .gallery figure,.articles article{background:#fffdf9;border:1px solid var(--line);border-radius:.7rem;overflow:hidden}
+    .gallery img{height:auto;aspect-ratio:1}
+    .articles{grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr))}
+    article{padding:1.15rem}
+    article p{margin-top:.55rem}
+    .faq{max-width:52rem}
+    details{border-bottom:1px solid var(--line);padding:.7rem 0}
+    .faq h2{margin-bottom:.7rem}
+    summary{font-weight:750;cursor:pointer;padding:.25rem 0}
+    details p{padding:.35rem 0 .4rem 1.15rem}
+    footer{border-top:1px solid var(--line);padding-block:1.25rem;background:#f0e5ed}
+    footer p{color:var(--muted);margin-bottom:.45rem}
+    @media(max-width:42rem){.hero{grid-template-columns:1fr}.hero img{aspect-ratio:2/1}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "name":"HubBuy spreadsheet – Produktlinks, QC-Fotos und Größen",
+    "mainEntity":[
+      {"@type":"Question","name":"Was ist ein HubBuy spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Es ist eine Übersicht mit Produktlinks für die Einkaufssuche. Je nach Liste enthält sie auch Größen, Varianten oder Hinweise zu QC-Fotos."}},
+      {"@type":"Question","name":"Wohin führen die Produktkategorien auf dieser Seite?","acceptedAnswer":{"@type":"Answer","text":"Die Kategorien führen zu Hipobuyfind. Dort kannst du nach Artikeln stöbern und die Angaben im jeweiligen Angebot prüfen."}},
+      {"@type":"Question","name":"Belegen QC-Fotos die Echtheit eines Artikels?","acceptedAnswer":{"@type":"Answer","text":"Nein. QC-Fotos zeigen sichtbare Merkmale des fotografierten Artikels. Für einen Echtheitsnachweis brauchst du belastbare Herkunftsbelege."}},
+      {"@type":"Question","name":"Was tun, wenn ein Produktlink ins Leere führt?","acceptedAnswer":{"@type":"Answer","text":"Suche nach Modellname oder Artikelnummer. Vergleiche beim Ersatzlink die gewählte Farbe, Größe und Verkäuferangaben erneut."}},
+      {"@type":"Question","name":"Wann sollte ich die Versandkosten prüfen?","acceptedAnswer":{"@type":"Answer","text":"Vor dem Kauf und erneut vor dem Versand. Für eine genauere Schätzung brauchst du das Lieferland, die Paketmaße und das Gewicht."}}
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/yycfo/">
+</head>
+<body>
+  <header>
+    <div class="wrap"><a href="https://www.hipobuyfind.com">hipobuyfind.com</a></div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="seitentitel">
+      <div>
+        <h1 id="seitentitel">HubBuy spreadsheet</h1>
+        <p>Ein HubBuy spreadsheet bündelt Produktlinks für die Einkaufssuche. Dieser Ratgeber zeigt dir, wie du passende Varianten findest, Größenangaben abgleichst und QC-Fotos prüfst.</p>
+        <p class="intro">Die Kategorien öffnen den Katalog von Hipobuyfind.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Katalog öffnen</a>
+      </div>
+      <figure>
+        <img src="https://www.courtsidesneakers.com/cdn/shop/products/315122-111-PHSRH000-750.png?v=1589453003&amp;width=650" alt="Weißer Nike Air Force 1 ’07 in Seitenansicht" width="650" height="390" fetchpriority="high" loading="eager">
+        <figcaption>Nike Air Force 1 ’07 · Modellbeispiel</figcaption>
+      </figure>
+    </section>
+
+    <nav class="categories" aria-labelledby="kategorien">
+      <h2 id="kategorien">Kategorien entdecken</h2>
+      <ul>
+        <li><a href="https://hipobuyfind.com/category-911-Shoes.html">Schuhe</a></li>
+        <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Hoodies &amp; Pullover</a></li>
+        <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-Shirts</a></li>
+        <li><a href="https://hipobuyfind.com/category-914-Jackets.html">Jacken</a></li>
+        <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Hosen &amp; Shorts</a></li>
+        <li><a href="https://hipobuyfind.com/category-916-Headwear.html">Caps &amp; Mützen</a></li>
+        <li><a href="https://hipobuyfind.com/category-917-Sets.html">Sets</a></li>
+        <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Unterwäsche</a></li>
+        <li><a href="https://hipobuyfind.com/category-919-Jersey.html">Trikots</a></li>
+        <li><a href="https://hipobuyfind.com/category-920-Accessories.html">Accessoires</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" aria-labelledby="modelle">
+      <h2 id="modelle">Modelle als Orientierung</h2>
+      <p>Die Bilder dienen als Stilreferenz. Die Verfügbarkeit einzelner Modelle ergibt sich aus dem jeweiligen Angebot.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://www.svpsports.ca/cdn/shop/files/Nike---Men_s-Club-Pull-Over-Hoodie-_FN3859-063__01_1024x.jpg?v=1762201582&amp;width=320" alt="Grauer Nike Club Fleece Hoodie mit Kängurutasche" width="320" height="320" loading="lazy" decoding="async">
+          <figcaption>Nike Club Fleece</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" alt="Beige-braune Gucci Baseballcap mit GG-Muster" width="640" height="640" loading="lazy" decoding="async">
+          <figcaption>Gucci GG-Cap</figcaption>
+        </figure>
+        <figure>
+          <img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-neverfull-mm--M46987_PM1_Back%20view.png?hei=320&amp;wid=320" alt="Braune Louis Vuitton Neverfull MM mit Monogramm und passendem Etui" width="320" height="320" loading="lazy" decoding="async">
+          <figcaption>Louis Vuitton Neverfull MM</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/%E3%82%AB%E3%83%AC-90-%E3%80%8A%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AF%E9%9E%8D%E3%81%AE%E4%B8%AD%E3%81%AB%E3%80%8B--004204S%2005-flat-wm-3-0-0-1000-1000_g.jpg?wid=320" alt="Blaues Hermès Carré 90 mit illustrierten Reitsätteln" width="320" height="320" loading="lazy" decoding="async">
+          <figcaption>Hermès Carré 90</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/N2241WOMCYD03S_SBG_E01-2?%24r9x10_raw%24=&amp;crop=0%2C0%2C4000%2C5000&amp;hei=346&amp;wid=320" alt="Goldfarbene Dior Petit CD Halskette mit Kristallen am CD-Motiv" width="320" height="346" loading="lazy" decoding="async">
+          <figcaption>Dior Petit CD</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ratgeber">
+      <h2 id="ratgeber">Vom Produktlink zur Bestellung</h2>
+      <div class="articles">
+        <article>
+          <h3>Produktlinks prüfen</h3>
+          <p>Bei einem Fund auf Weidian, Taobao oder 1688 speicherst du am besten den Original-Link, die Artikelnummer und den Namen des Verkäufers. Öffne das Angebot vor dem Kauf erneut, wähle die gewünschte Farbe und prüfe, ob genau diese Variante lieferbar ist.</p>
+          <p>Ein Preis in der Übersicht kann sich auf die günstigste Variante beziehen. Vergleiche deshalb den Preis der ausgewählten Ausführung und die Rückgabebedingungen des Verkäufers.</p>
+        </article>
+        <article>
+          <h3>Größentabellen richtig lesen</h3>
+          <p>Für Sneaker misst du beide Füße im Stehen und vergleichst den längeren Fuß mit der Angabe des Verkäufers. Fußlänge und Innensohlenlänge sind unterschiedliche Maße. Prüfe daher, welche Länge in der Tabelle steht.</p>
+          <p>Für Hoodies und Jacken misst du Brustweite, Schulterbreite und Ärmellänge an einem gut sitzenden Kleidungsstück. Bei Hosen helfen Bundweite und Innenbeinlänge. Bei Caps sind Kopfumfang und Verstellbereich entscheidend.</p>
+        </article>
+        <article>
+          <h3>QC-Fotos gezielt prüfen</h3>
+          <p>QC-Fotos sind Aufnahmen zur Sichtprüfung. Bei Schuhen helfen Bilder von Zehenbox, Ferse und Sohle. Bei Kleidung lohnt sich ein Blick auf Nähte, Stoffoberfläche und Etikett. Bei Taschen und Schmuck sind Nahaufnahmen von Beschlägen und Verschlüssen hilfreich.</p>
+          <p>Fehlt ein entscheidendes Detail, frage nach einem Foto aus dem passenden Winkel. Halte dabei die Rückgabefrist im Blick.</p>
+        </article>
+        <article>
+          <h3>Versand nach Deutschland, Österreich und in die Schweiz</h3>
+          <p>Rechne Warenpreis, Inlandsversand, Servicegebühren und internationalen Versand zusammen. Prüfe zusätzlich, welche Einfuhrabgaben oder Abfertigungsgebühren für das Lieferland anfallen können.</p>
+          <p>Vergleiche bei mehreren Artikeln den Einzelversand mit einem Sammelpaket. Frage, ob der Anbieter nach tatsächlichem Gewicht oder Volumengewicht abrechnet. Ein großer Schuhkarton kann die Versandkalkulation verändern.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="fragen">
+      <h2 id="fragen">Häufige Fragen</h2>
+      <details open>
+        <summary>Was ist ein HubBuy spreadsheet?</summary>
+        <p>Es ist eine Übersicht mit Produktlinks für die Einkaufssuche. Je nach Liste enthält sie auch Größen, Varianten oder Hinweise zu QC-Fotos.</p>
+      </details>
+      <details>
+        <summary>Wohin führen die Produktkategorien auf dieser Seite?</summary>
+        <p>Die Kategorien führen zu Hipobuyfind. Dort kannst du nach Artikeln stöbern und die Angaben im jeweiligen Angebot prüfen.</p>
+      </details>
+      <details>
+        <summary>Belegen QC-Fotos die Echtheit eines Artikels?</summary>
+        <p>Nein. QC-Fotos zeigen sichtbare Merkmale des fotografierten Artikels. Für einen Echtheitsnachweis brauchst du belastbare Herkunftsbelege.</p>
+      </details>
+      <details>
+        <summary>Was tun, wenn ein Produktlink ins Leere führt?</summary>
+        <p>Suche nach Modellname oder Artikelnummer. Vergleiche beim Ersatzlink die gewählte Farbe, Größe und Verkäuferangaben erneut.</p>
+      </details>
+      <details>
+        <summary>Wann sollte ich die Versandkosten prüfen?</summary>
+        <p>Vor dem Kauf und erneut vor dem Versand. Für eine genauere Schätzung brauchst du das Lieferland, die Paketmaße und das Gewicht.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Unabhängiger Einkaufsratgeber. Markennamen dienen der Modellbeschreibung.</p>
+      <a href="https://www.hipobuyfind.com">Zu hipobuyfind.com</a>
+    </div>
+  </footer>
+</body>
+</html>
